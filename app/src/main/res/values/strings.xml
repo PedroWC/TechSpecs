@@ -1,0 +1,97 @@
+<resources>
+    <string name="choose_component">Escolha o Componente</string>
+    <string name="app_name">TechSpecs</string>
+
+    <string-array name="computer_components">
+        <item>Placa-mãe</item>
+        <item>Processador</item>
+        <item>Placa de Vídeo</item>
+        <item>Memória RAM</item>
+        <item>Disco Rígido</item>
+        <item>SSD</item>
+        <item>Fonte de Alimentação</item>
+        <item>Gabinete</item>
+        <item>Cooler</item>
+        <item>Placa de Rede</item>
+    </string-array>
+
+    <string-array name="placa_mae">
+        <item>Asus ROG Strix Z590-E</item>
+        <item>MSI MEG Z490 Godlike</item>
+        <item>Gigabyte Z390 Aorus Ultra</item>
+        <item>ASRock B450M Steel Legend</item>
+        <item>Biostar Racing B365GTQ</item>
+    </string-array>
+
+    <string-array name="processador">
+        <item>Intel Core i9-10900K</item>
+        <item>AMD Ryzen 9 3950X</item>
+        <item>Intel Core i7-10700K</item>
+        <item>AMD Ryzen 5 3600</item>
+        <item>Intel Core i5-10600K</item>
+    </string-array>
+
+    <string-array name="placa_de_video">
+        <item>NVIDIA RTX 3080</item>
+        <item>AMD Radeon RX 6800 XT</item>
+        <item>NVIDIA GTX 1660 Ti</item>
+        <item>AMD Radeon RX 5500 XT</item>
+        <item>NVIDIA RTX 3060 Ti</item>
+    </string-array>
+
+    <string-array name="memoria_ram">
+        <item>Corsair Vengeance LPX 16GB</item>
+        <item>G.Skill Trident Z RGB 16GB</item>
+        <item>HyperX Predator DDR4 32GB</item>
+        <item>Crucial Ballistix Sport LT 8GB</item>
+        <item>Team T-FORCE XTREEM ARGB 16GB</item>
+    </string-array>
+
+    <string-array name="disco_rigido">
+        <item>Seagate BarraCuda 2TB</item>
+        <item>WD Blue 1TB</item>
+        <item>Toshiba P300 3TB</item>
+        <item>Seagate IronWolf 4TB</item>
+        <item>WD Black 6TB</item>
+    </string-array>
+
+    <string-array name="ssd">
+        <item>Samsung 970 EVO Plus 1TB</item>
+        <item>Crucial MX500 1TB</item>
+        <item>Kingston A2000 500GB</item>
+        <item>WD Blue 3D NAND 1TB</item>
+        <item>Seagate FireCuda 520 2TB</item>
+    </string-array>
+
+    <string-array name="fonte_de_alimentacao">
+        <item>Corsair RM750x</item>
+        <item>EVGA SuperNOVA 850 G3</item>
+        <item>Seasonic FOCUS Plus 650 Gold</item>
+        <item>Thermaltake Toughpower Grand 1200W</item>
+        <item>Be Quiet! Straight Power 11 750W</item>
+    </string-array>
+
+    <string-array name="gabinete">
+        <item>NZXT H510</item>
+        <item>Fractal Design Meshify C</item>
+        <item>Corsair iCUE 4000X RGB</item>
+        <item>Phanteks Eclipse P400A</item>
+        <item>Cooler Master MasterCase H500</item>
+    </string-array>
+
+    <string-array name="cooler">
+        <item>Cooler Master Hyper 212</item>
+        <item>Noctua NH-D15</item>
+        <item>Be Quiet! Dark Rock Pro 4</item>
+        <item>NZXT Kraken X73</item>
+        <item>Corsair H100i RGB Platinum</item>
+    </string-array>
+
+    <string-array name="placa_de_rede">
+        <item>TP-Link Archer T6E AC1300</item>
+        <item>ASUS PCE-AC88 AC3100</item>
+        <item>Netgear Nighthawk AC1900</item>
+        <item>TP-Link TL-WN881ND N300</item>
+        <item>Gigabyte GC-WB867D-I</item>
+    </string-array>
+</resources>
