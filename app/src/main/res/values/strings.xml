@@ -41,7 +41,7 @@
 
     <string-array name="memoria_ram">
         <item>Corsair Vengeance LPX 16GB</item>
-        <item>G.Skill Trident Z RGB 16GB</item>
+        <item>G_Skill Trident Z RGB 16GB</item>
         <item>HyperX Predator DDR4 32GB</item>
         <item>Crucial Ballistix Sport LT 8GB</item>
         <item>Team T-FORCE XTREEM ARGB 16GB</item>
@@ -94,4 +94,78 @@
         <item>TP-Link TL-WN881ND N300</item>
         <item>Gigabyte GC-WB867D-I</item>
     </string-array>
+
+    <!--                    Descrições                    -->
+    <!-- Placas-Mãe -->
+    <string name="asus_rog_strix_z590_e">Placa-mãe de alta performance para jogos, suporta processadores Intel de 10ª e 11ª geração, com conexão Wi-Fi 6, Bluetooth, e iluminação RGB Aura Sync.</string>
+    <string name="msi_meg_z490_godlike">Placa-mãe topo de linha para entusiastas, com tela OLED dinâmica, suporte a quad-channel DDR4, e LAN 10G super rápida.</string>
+    <string name="gigabyte_z390_aorus_ultra">Placa-mãe robusta para jogadores, com triplo M.2, dissipação térmica avançada, e suporte a Intel 8ª e 9ª geração.</string>
+    <string name="asrock_b450m_steel_legend">Placa-mãe durável com estética impressionante, suporte para Ryzen de até 3ª geração, e iluminação Polychrome RGB.</string>
+    <string name="biostar_racing_b365gtq">Placa-mãe compacta e confiável, otimizada para jogos e produtividade com suporte a processadores Intel Core de 8ª e 9ª geração.</string>
+
+    <!-- Processadores -->
+    <string name="intel_core_i9_10900k">Processador de 10ª geração com 10 núcleos, desbloqueado para overclock, oferece desempenho de elite para jogos e criação de conteúdo.</string>
+    <string name="amd_ryzen_9_3950x">Processador com 16 núcleos, oferecendo excelente desempenho em multitarefa e criação de conteúdo, com eficiência energética superior.</string>
+    <string name="intel_core_i7_10700k">Processador de 8 núcleos, desbloqueado, ideal para jogos de alta performance e tarefas exigentes.</string>
+    <string name="amd_ryzen_5_3600">Processador de ótimo custo-benefício com 6 núcleos, oferece desempenho sólido para jogos e trabalho, com baixo consumo de energia.</string>
+    <string name="intel_core_i5_10600k">Processador desbloqueado com 6 núcleos, projetado para jogos e aplicações que exigem alto desempenho.</string>
+
+    <!-- Placas de Vídeo -->
+    <string name="nvidia_rtx_3080">Placa de vídeo de alta performance, ideal para jogos em 4K e realidade virtual, com suporte a ray tracing e tecnologia DLSS.</string>
+    <string name="amd_radeon_rx_6800_xt">Placa de vídeo competitiva para jogos em 4K, suporta ray tracing e oferece excelente desempenho em relação ao custo.</string>
+    <string name="nvidia_gtx_1660_ti">Placa de vídeo com ótimo custo-benefício para jogos em 1080p, oferece desempenho sólido sem quebrar o orçamento.</string>
+    <string name="amd_radeon_rx_5500_xt">Placa de vídeo de entrada, ideal para jogos em 1080p, oferece bom desempenho com eficiência energética.</string>
+    <string name="nvidia_rtx_3060_ti">Placa de vídeo com excelente relação custo-benefício, ideal para jogos em alta definição com suporte a ray tracing.</string>
+
+    <!-- Memórias RAM -->
+    <string name="corsair_vengeance_lpx_16gb">Kit de memória DDR4 de 16GB (2x8GB), projetado para overclock de alto desempenho com dissipadores de calor de perfil baixo.</string>
+    <string name="gskill_trident_z_rgb_16gb">Kit de memória DDR4 de 16GB (2x8GB) com iluminação RGB personalizável, oferece desempenho e estética para o seu setup.</string>
+    <string name="hyperx_predator_ddr4_32gb">Kit de memória DDR4 de 32GB (2x16GB), projetado para gamers e entusiastas buscando desempenho extremo e grandes capacidades.</string>
+    <string name="crucial_ballistix_sport_lt_8gb">Memória DDR4 de 8GB, ideal para jogadores e entusiastas que buscam desempenho confiável a um preço acessível.</string>
+    <string name="team_tforce_xtreem_argb_16gb">Kit de memória DDR4 de 16GB (2x8GB) com iluminação ARGB sincronizável, para desempenho e estética impressionantes.</string>
+
+    <!-- Armazenamento -->
+    <string name="seagate_barracuda_2tb">Disco rígido de 2TB, combina capacidade generosa e velocidade de 7200 RPM para armazenamento rápido e confiável.</string>
+    <string name="wd_blue_1tb">Disco rígido de 1TB com confiabilidade comprovada para uso diário, oferece um bom equilíbrio entre desempenho e capacidade.</string>
+    <string name="toshiba_p300_3tb">Disco rígido de 3TB, oferece armazenamento confiável e de alta capacidade para aplicações e dados intensivos com velocidade de 7200 RPM.</string>
+    <string name="seagate_ironwolf_4tb">Disco rígido de 4TB projetado para NAS, com otimização para 24/7 de operação em ambientes multi-usuario e com carga de trabalho alta.</string>
+    <string name="wd_black_6tb">Disco rígido de 6TB para jogos, oferece desempenho máximo para jogadores e profissionais criativos com tecnologia de cache avançada.</string>
+    <string name="samsung_970_evo_plus_1tb">SSD NVMe de 1TB com velocidades de leitura/escrita excepcionais, ideal para edição de vídeo, simulações e jogos intensivos.</string>
+    <string name="crucial_mx500_1tb">SSD de 1TB com ótimo custo-benefício, oferece desempenho sólido e confiável com criptografia de hardware integrada.</string>
+    <string name="kingston_a2000_500gb">SSD NVMe de 500GB, oferece armazenamento rápido e confiável com desempenho aprimorado para boot, carregamento e transferências de arquivos.</string>
+
+    <!-- Fontes de Alimentação -->
+    <string name="corsair_rm750x">Fonte de alimentação de 750W, modular, com eficiência 80 PLUS Gold, oferece operação silenciosa e confiável com ótimo cabeamento.</string>
+    <string name="evga_supernova_850_g3">Fonte de 850W com eficiência 80 PLUS Gold, compacta e com ventoinha ultra silenciosa, ideal para sistemas de alto desempenho.</string>
+    <string name="seasonic_focus_plus_650_gold">Fonte de alimentação de 650W, modular, 80 PLUS Gold, destaca-se pela eficiência energética e operação silenciosa.</string>
+    <string name="thermaltake_toughpower_grand_1200w">Fonte de 1200W para entusiastas, com certificação 80 PLUS Platinum, oferece excelente eficiência e estabilidade para sistemas de alta demanda.</string>
+    <string name="be_quiet_straight_power_11_750w">Fonte de 750W, 80 PLUS Gold, conhecida por sua operação praticamente inaudível e alta eficiência, ideal para construções silenciosas.</string>
+
+    <!-- Gabinetes -->
+    <string name="nzxt_h510">Gabinete mid-tower com design minimalista, oferece excelente gerenciamento de cabos e opções de montagem para refrigeração a água.</string>
+    <string name="fractal_design_meshify_c">Gabinete mid-tower com frente de malha para fluxo de ar maximizado, suporta radiadores de até 360mm, ideal para sistemas de alto desempenho.</string>
+    <string name="corsair_icue_4000x_rgb">Gabinete mid-tower com painéis de vidro temperado e três ventoinhas RGB frontais, oferece iluminação personalizável e excelente fluxo de ar.</string>
+    <string name="phanteks_eclipse_p400a">Gabinete mid-tower com frente em malha metálica para otimização de fluxo de ar, suporta diversas configurações de ventoinhas e radiadores.</string>
+    <string name="cooler_master_mastercase_h500">Gabinete mid-tower com duas ventoinhas RGB de 200mm na frente, proporciona excelente fluxo de ar e estética impressionante.</string>
+
+    <!-- Soluções de Refrigeração -->
+    <string name="cooler_master_hyper_212">Cooler para CPU com excelente custo-benefício, oferece desempenho de refrigeração sólido com baixo nível de ruído.</string>
+    <string name="noctua_nh_d15">Cooler para CPU de alta performance com duas ventoinhas, design de dupla torre para máximo desempenho de refrigeração em cargas intensivas.</string>
+    <string name="be_quiet_dark_rock_pro_4">Cooler para CPU de alta performance, extremamente silencioso, com duas ventoinhas e capacidade de dissipação térmica até 250W.</string>
+    <string name="nzxt_kraken_x73">Sistema de refrigeração líquida AIO de 360mm, com iluminação RGB personalizável, oferece excelente refrigeração e estética para o seu sistema.</string>
+    <string name="corsair_h100i_rgb_platinum">Sistema de refrigeração líquida AIO de 240mm com iluminação RGB, combina desempenho de refrigeração superior com visuais impressionantes.</string>
+
+    <!-- Adaptadores de Rede -->
+    <string name="tp_link_archer_t6e_ac1300">Adaptador de rede sem fio AC1300 PCIe, oferece velocidades de até 1300Mbps, ideal para jogos online e streaming de vídeo em HD.</string>
+    <string name="asus_pce_ac88_ac3100">Adaptador de rede sem fio PCIe AC3100 de alta performance, com quatro antenas externas para cobertura máxima e velocidades de até 2100Mbps.</string>
+    <string name="netgear_nighthawk_ac1900">Adaptador USB sem fio AC1900, oferece conexões rápidas e estáveis para jogos sem lag e streaming de vídeo, com design portátil.</string>
+    <string name="tp_link_tl_wn881nd_n300">Adaptador PCIe sem fio N300, proporciona uma conexão estável e confiável para navegação na internet e tarefas online básicas.</string>
+    <string name="gigabyte_gc_wb867d_i">Cartão de rede sem fio com Bluetooth 4.2, suporta Wi-Fi 802.11ac de até 867 Mbps, ideal para atualizações de desktop que exigem conectividade sem fio.</string>
+    <string name="ajuda">Ajuda</string>
+    <string name="config">Configurações</string>
+    <string name="escuro">Modo Escuro</string>
+    <string name="claro">Modo Claro</string>
+    <string name="imagem_do_modelo">Imagem do modelo</string>
+
+
 </resources>

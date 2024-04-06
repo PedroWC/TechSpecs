@@ -30,7 +30,16 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:paddingTop="8dp" />
 
-    <!-- Adicione mais TextViews ou outras views aqui para mostrar detalhes do componente -->
+        <Button
+            android:id="@+id/buttonSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:text="Falar Descrição" />
+
+
+        <!-- Adicione mais TextViews ou outras views aqui para mostrar detalhes do componente -->
 </LinearLayout>
 
     </ScrollView>

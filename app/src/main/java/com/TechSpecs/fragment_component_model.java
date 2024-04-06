@@ -1,43 +1,48 @@
 package com.TechSpecs;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.GridView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import android.widget.GridView;
-import android.widget.ListView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
-import java.util.Objects;
+import com.TechSpecs.model.ModelAdapter;
 
 public class fragment_component_model extends Fragment {
-
-    private GridView gridView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_component_model, container, false);
 
-        gridView = view.findViewById(R.id.gridViewComponentModels);
+        GridView gridView = view.findViewById(R.id.gridViewComponentModels);
 
         // Recebe o tipo de componente selecionado do ComponentTypeFragment
         Bundle args = getArguments();
         String componentType = args.getString("componentType", "");
 
-        // Substitua este array pelo carregamento dos modelos apropriados com base em componentType
+
         int resourceId = this.getResources().getIdentifier(componentType, "array", getActivity().getPackageName());
         String[] models = getResources().getStringArray(resourceId);
+        int[] imageIds = new int[models.length];
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, models);
+        for (int i = 0; i < models.length; i++) {
+            // Supondo que os nomes dos arquivos de imagem seguem a convenção de nomenclatura e são idênticos aos nomes dos modelos
+            String modelName = models[i].toLowerCase().replaceAll("[ -]", "_");
+            modelName = modelName.replaceAll("[!]", "");
+            int imageId = getResources().getIdentifier(modelName, "drawable", getActivity().getPackageName());
+            imageIds[i] = imageId != 0 ? imageId : R.drawable.ic_default_image;
+        }
+
+        ModelAdapter adapter = new ModelAdapter(getActivity(), models, imageIds);
         gridView.setAdapter(adapter);
+
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

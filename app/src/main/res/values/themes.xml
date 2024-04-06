@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.TechSpecsCatálogoDeComponentes" parent="Base.Theme.TechSpecsCatálogoDeComponentes" />
+
+    <style name="Theme.TechSpecsCatálogoDeComponentes.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TechSpecsCatálogoDeComponentes.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TechSpecsCatálogoDeComponentes.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
