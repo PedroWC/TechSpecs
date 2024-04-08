@@ -1,34 +1,29 @@
 package com.TechSpecs;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import android.speech.tts.TextToSpeech.OnInitListener;
-import com.TechSpecs.model.ComponentModel;
 
-import java.util.Locale;
+import com.TechSpecs.utils.AudioHelper;
 
-public class fragment_component_detail extends Fragment implements TextToSpeech.OnInitListener {
+public class fragment_component_detail extends Fragment {
 
-    private TextToSpeech textToSpeech;
-    private CharSequence descriptionText;
+
+    private AudioHelper audioHelper;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Inicializar Text-to-Speech
-        textToSpeech = new TextToSpeech((Context) getActivity(), (TextToSpeech.OnInitListener) this);
+        audioHelper = new AudioHelper(); // Inicializa AudioHelper
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -37,14 +32,8 @@ public class fragment_component_detail extends Fragment implements TextToSpeech.
         ImageView imageViewComponent = view.findViewById(R.id.imageViewComponent);
         TextView textViewComponentName = view.findViewById(R.id.textViewComponentName);
         TextView textViewComponentDetail = view.findViewById(R.id.textViewComponentDetail);
-        Button buttonSpeak = view.findViewById(R.id.buttonSpeak);
 
-        buttonSpeak.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                speakOut();
-            }
-        });
+
 
         Bundle args = getArguments();
         if (args != null) {
@@ -59,7 +48,6 @@ public class fragment_component_detail extends Fragment implements TextToSpeech.
             int stringResId = getResources().getIdentifier(resourceName, "string", getActivity().getPackageName());
             if (stringResId != 0) { // Se o recurso de string for encontrado
                 textViewComponentDetail.setText(getString(stringResId));
-                this.descriptionText = getString(stringResId);
             } else { // Caso em que o recurso de string não é encontrado
                 textViewComponentDetail.setText("Descrição não disponível."); // Definir um texto padrão ou deixar vazio
             }
@@ -77,33 +65,14 @@ public class fragment_component_detail extends Fragment implements TextToSpeech.
     }
 
     @Override
-    public void onInit(int status) {
-        if (status == TextToSpeech.SUCCESS) {
-            Locale Locale = null;
-            int result = textToSpeech.setLanguage(Locale.getDefault());
-
-            if (result == TextToSpeech.LANG_MISSING_DATA ||
-                    result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                // Lidar com a situação onde o idioma não é suportado.
-            } else {
-                // O idioma é suportado e os dados estão disponíveis.
-            }
-        } else {
-            // Inicialização falhou.
-        }
-    }
-
-    private void speakOut() {
-        textToSpeech.speak(this.descriptionText, TextToSpeech.QUEUE_FLUSH, null, null);
+    public void onResume() {
+        super.onResume();
+        audioHelper.playBackSound(getActivity());
     }
 
     @Override
     public void onDestroy() {
-        // Fechar o Text-to-Speech quando o Fragment for destruído
-        if (textToSpeech != null) {
-            textToSpeech.stop();
-            textToSpeech.shutdown();
-        }
         super.onDestroy();
+        audioHelper.releaseMediaPlayer();
     }
 }

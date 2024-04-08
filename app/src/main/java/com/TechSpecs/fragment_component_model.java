@@ -1,5 +1,6 @@
 package com.TechSpecs;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,16 +13,26 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.TechSpecs.model.ModelAdapter;
+import com.TechSpecs.utils.AudioHelper;
+import com.TechSpecs.utils.model.ModelAdapter;
 
 public class fragment_component_model extends Fragment {
+
+    private GridView gridView;
+    private AudioHelper audioHelper;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        audioHelper = new AudioHelper(); // Inicializa AudioHelper
+    }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_component_model, container, false);
 
-        GridView gridView = view.findViewById(R.id.gridViewComponentModels);
+        gridView = view.findViewById(R.id.gridViewComponentModels);
 
         // Recebe o tipo de componente selecionado do ComponentTypeFragment
         Bundle args = getArguments();
@@ -50,10 +61,17 @@ public class fragment_component_model extends Fragment {
                 // Aqui você pode passar mais detalhes sobre o modelo selecionado
                 String selectedModel = models[position];
                 openComponentDetailFragment(selectedModel);
+                audioHelper.playClickSound(getActivity());
             }
         });
 
         return view;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        audioHelper.releaseMediaPlayer();
     }
 
     private int getResourceId(String componentType) {

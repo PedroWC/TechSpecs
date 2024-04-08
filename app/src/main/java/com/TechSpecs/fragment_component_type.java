@@ -14,6 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.TechSpecs.utils.AudioHelper;
+
 import java.text.Normalizer;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,8 +24,14 @@ import java.util.Objects;
 public class fragment_component_type extends Fragment {
 
     private Map<String, String> typeToResourceMap;
-
     private ListView listView;
+    private AudioHelper audioHelper;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        audioHelper = new AudioHelper(); // Inicializa AudioHelper
+    }
 
     @Nullable
     @Override
@@ -43,6 +51,7 @@ public class fragment_component_type extends Fragment {
                 // Pegue o tipo de componente selecionado baseado na posição do clique
                 String selectedComponentType = componentTypes[position];
                 openComponentModelFragment(selectedComponentType);
+                audioHelper.playClickSound(getActivity());
             }
         });
 
@@ -72,5 +81,11 @@ public class fragment_component_type extends Fragment {
         transaction.replace(R.id.fragment_container, fragment);
         transaction.addToBackStack(null); // Permite que o usuário volte para o fragmento anterior
         transaction.commit();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        audioHelper.releaseMediaPlayer();
     }
 }

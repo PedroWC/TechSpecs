@@ -10,8 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/application_icon_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TechSpecsCatálogoDeComponentes"
-        tools:targetApi="31">
+        android:theme="@style/Theme.TechSpecsCatalogoDeComponentes">
         <activity
             android:name=".MainActivity"
             android:exported="true">
