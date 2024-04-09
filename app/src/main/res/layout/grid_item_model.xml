@@ -19,6 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="@color/textcolor"
         android:paddingTop="8dp" />
+
+<!--    TODO grid esta setando fotos com uma adaptação do nome, transformar em grid personalizado-->
 
 </LinearLayout>

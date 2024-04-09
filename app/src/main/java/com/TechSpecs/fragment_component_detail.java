@@ -13,63 +13,87 @@ import androidx.fragment.app.Fragment;
 
 import com.TechSpecs.utils.AudioHelper;
 
-public class fragment_component_detail extends Fragment {
 
+public class fragment_component_detail extends Fragment {
 
     private AudioHelper audioHelper;
 
+    /**
+     * Inicializa o helper de áudio.
+     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        audioHelper = new AudioHelper(); // Inicializa AudioHelper
+        audioHelper = new AudioHelper();
     }
 
+    /**
+     * Cria e retorna a hierarquia de view associada com o fragmento.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_component_detail, container, false);
 
-        ImageView imageViewComponent = view.findViewById(R.id.imageViewComponent);
-        TextView textViewComponentName = view.findViewById(R.id.textViewComponentName);
-        TextView textViewComponentDetail = view.findViewById(R.id.textViewComponentDetail);
-
-
-
-        Bundle args = getArguments();
-        if (args != null) {
-            String modelName = args.getString("model", "");
-            // Texto do nome
-            textViewComponentName.setText(modelName);
-
-            String resourceName = modelName.toLowerCase().replaceAll("[ -]", "_");
-            resourceName = resourceName.replaceAll("[!]", "");
-
-            // Busca o ID do recurso de string
-            int stringResId = getResources().getIdentifier(resourceName, "string", getActivity().getPackageName());
-            if (stringResId != 0) { // Se o recurso de string for encontrado
-                textViewComponentDetail.setText(getString(stringResId));
-            } else { // Caso em que o recurso de string não é encontrado
-                textViewComponentDetail.setText("Descrição não disponível."); // Definir um texto padrão ou deixar vazio
-            }
-
-            // Imagem
-            int imageResId = getResources().getIdentifier(resourceName, "drawable", getActivity().getPackageName());
-            if (imageResId != 0) { // Se a imagem for encontrada
-                imageViewComponent.setImageResource(imageResId);
-            } else { // Se imagem não for encontrada
-                imageViewComponent.setImageResource(R.drawable.ic_default_image);
-            }
-        }
+        // Configurando a exibição dos detalhes do componente
+        setupComponentDetails(view);
 
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        audioHelper.playBackSound(getActivity());
+    /**
+     * Configura e exibe os detalhes do componente, incluindo imagem e descrição.
+     */
+    private void setupComponentDetails(View view) {
+        ImageView imageViewComponent = view.findViewById(R.id.imageViewComponent);
+        TextView textViewComponentName = view.findViewById(R.id.textViewComponentName);
+        TextView textViewComponentDetail = view.findViewById(R.id.textViewComponentDetail);
+
+        Bundle args = getArguments();
+        if (args != null) {
+            String modelName = args.getString("model", "");
+            textViewComponentName.setText(modelName);
+
+            String resourceName = normalizeResourceName(modelName);
+
+            // Exibindo a descrição do componente
+            displayComponentDescription(textViewComponentDetail, resourceName);
+
+            // Exibindo a imagem do componente
+            displayComponentImage(imageViewComponent, resourceName);
+        }
     }
 
+    /**
+     * Normaliza o nome do recurso para uso como identificador.
+     */
+    private String normalizeResourceName(String resourceName) {
+        return resourceName.toLowerCase().replaceAll("[ -]", "_").replaceAll("[!]", "");
+    }
+
+    /**
+     * Exibe a descrição do componente baseado no identificador do recurso.
+     */
+    private void displayComponentDescription(TextView textView, String resourceName) {
+        int stringResId = getResources().getIdentifier(resourceName, "string", getActivity().getPackageName());
+        if (stringResId != 0) {
+            textView.setText(getString(stringResId));
+        } else {
+            textView.setText("Descrição não disponível.");
+        }
+    }
+
+    /**
+     * Exibe a imagem do componente baseado no identificador do recurso.
+     */
+    private void displayComponentImage(ImageView imageView, String resourceName) {
+        int imageResId = getResources().getIdentifier(resourceName, "drawable", getActivity().getPackageName());
+        imageView.setImageResource(imageResId != 0 ? imageResId : R.drawable.ic_default_image);
+    }
+
+    /**
+     * Libera recursos do player de mídia ao destruir o fragmento.
+     */
     @Override
     public void onDestroy() {
         super.onDestroy();

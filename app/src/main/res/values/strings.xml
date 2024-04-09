@@ -2,6 +2,17 @@
     <string name="choose_component">Escolha o Componente</string>
     <string name="app_name">TechSpecs</string>
 
+    <string name="language">Idioma</string>
+    <string name="theme">Tema</string>
+    <string-array name="languages">
+        <item>Português</item>
+        <item>Inglês</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Modo Claro</item>
+        <item>Modo Escuro</item>
+    </string-array>
+
     <string-array name="computer_components">
         <item>Placa-mãe</item>
         <item>Processador</item>
@@ -124,12 +135,17 @@
     <string name="crucial_ballistix_sport_lt_8gb">Memória DDR4 de 8GB, ideal para jogadores e entusiastas que buscam desempenho confiável a um preço acessível.</string>
     <string name="team_tforce_xtreem_argb_16gb">Kit de memória DDR4 de 16GB (2x8GB) com iluminação ARGB sincronizável, para desempenho e estética impressionantes.</string>
 
-    <!-- Armazenamento -->
+    <!-- Armazenamento HDD -->
     <string name="seagate_barracuda_2tb">Disco rígido de 2TB, combina capacidade generosa e velocidade de 7200 RPM para armazenamento rápido e confiável.</string>
     <string name="wd_blue_1tb">Disco rígido de 1TB com confiabilidade comprovada para uso diário, oferece um bom equilíbrio entre desempenho e capacidade.</string>
     <string name="toshiba_p300_3tb">Disco rígido de 3TB, oferece armazenamento confiável e de alta capacidade para aplicações e dados intensivos com velocidade de 7200 RPM.</string>
     <string name="seagate_ironwolf_4tb">Disco rígido de 4TB projetado para NAS, com otimização para 24/7 de operação em ambientes multi-usuario e com carga de trabalho alta.</string>
     <string name="wd_black_6tb">Disco rígido de 6TB para jogos, oferece desempenho máximo para jogadores e profissionais criativos com tecnologia de cache avançada.</string>
+
+
+    <!-- Armazenamento SSD -->
+    <string name="wd_blue_3d_nand_1tb">O WD Blue 3D NAND 1TB é um SSD (unidade de estado sólido) que combina velocidade, durabilidade e capacidade de armazenamento de alto nível. Projetado com a tecnologia 3D NAND, este SSD oferece velocidades de leitura e gravação mais rápidas, melhor eficiência energética e uma maior confiabilidade em comparação com os SSDs tradicionais 2D NAND. Com 1TB de capacidade, proporciona amplo espaço para seus arquivos, jogos, programas e sistema operacional, melhorando significativamente o tempo de inicialização e a resposta do sistema. Ideal para usuários que buscam melhorar o desempenho de seus computadores ou notebooks sem comprometer o espaço de armazenamento.</string>
+    <string name="seagate_firecuda_520_2tb">O Seagate FireCuda 520 2TB é um SSD de alto desempenho projetado para entusiastas de jogos e profissionais criativos que necessitam de velocidades extremas de transferência de dados. Este SSD NVMe PCIe Gen4 oferece uma das maiores velocidades de leitura e gravação disponíveis no mercado, tornando-o perfeito para carregar jogos pesados, editar vídeos em alta resolução e executar tarefas intensivas sem atrasos. Com 2TB de capacidade, oferece muito espaço para armazenar uma vasta biblioteca de jogos, vídeos, fotos e aplicativos. Além disso, é compatível com a mais recente geração de motherboards, garantindo que você aproveite ao máximo o potencial do seu hardware de última geração.</string>
     <string name="samsung_970_evo_plus_1tb">SSD NVMe de 1TB com velocidades de leitura/escrita excepcionais, ideal para edição de vídeo, simulações e jogos intensivos.</string>
     <string name="crucial_mx500_1tb">SSD de 1TB com ótimo custo-benefício, oferece desempenho sólido e confiável com criptografia de hardware integrada.</string>
     <string name="kingston_a2000_500gb">SSD NVMe de 500GB, oferece armazenamento rápido e confiável com desempenho aprimorado para boot, carregamento e transferências de arquivos.</string>
@@ -161,11 +177,16 @@
     <string name="netgear_nighthawk_ac1900">Adaptador USB sem fio AC1900, oferece conexões rápidas e estáveis para jogos sem lag e streaming de vídeo, com design portátil.</string>
     <string name="tp_link_tl_wn881nd_n300">Adaptador PCIe sem fio N300, proporciona uma conexão estável e confiável para navegação na internet e tarefas online básicas.</string>
     <string name="gigabyte_gc_wb867d_i">Cartão de rede sem fio com Bluetooth 4.2, suporta Wi-Fi 802.11ac de até 867 Mbps, ideal para atualizações de desktop que exigem conectividade sem fio.</string>
+
     <string name="ajuda">Ajuda</string>
     <string name="config">Configurações</string>
     <string name="escuro">Modo Escuro</string>
     <string name="claro">Modo Claro</string>
     <string name="imagem_do_modelo">Imagem do modelo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="apply">Aplicar</string>
+    <string name="system_default">System Default</string>
+
 
 
 </resources>

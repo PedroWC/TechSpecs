@@ -8,4 +8,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_gray">#FF121212</color>
     <color name="gray">#FF888888</color>
+    <color name="colorPrimary">#263238</color>
+    <color name="textcolor">#F4F4F4</color>
+    <color name="spinnerColor">#3C4F59</color>
 </resources>

@@ -3,18 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.basiclayoutmenuopcoes24.MainActivity">
     <item
-        android:id="@+id/op_ajuda"
-        android:title="@string/ajuda"/>
-    <item
         android:id="@+id/op_conf"
+        android:textColor="@color/textcolor"
         android:title="@string/config">
-        <menu>
-            <item
-                android:id="@+id/op_escuro"
-                android:title="@string/escuro"/>
-            <item
-                android:id="@+id/op_claro"
-                android:title="@string/claro"/>
-        </menu>
     </item>
 </menu>

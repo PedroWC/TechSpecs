@@ -1,4 +1,4 @@
-package com.TechSpecs.utils.model;
+package com.TechSpecs.utils.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
