@@ -22,6 +22,4 @@
         android:textColor="@color/textcolor"
         android:paddingTop="8dp" />
 
-<!--    TODO grid esta setando fotos com uma adaptação do nome, transformar em grid personalizado-->
-
 </LinearLayout>

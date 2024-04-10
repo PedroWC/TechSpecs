@@ -3,12 +3,15 @@ package com.TechSpecs;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
+import android.text.SpannableString;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.TechSpecs.utils.AudioHelper;
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
     }
 
     /**
@@ -84,6 +88,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflando o menu; adiciona itens à barra de ação se ela estiver presente.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        // Encontrando o item pelo ID
+        MenuItem menuItem = menu.findItem(R.id.op_conf);
+
+        // Criando um SpannableString para alterar a cor do texto
+        SpannableString s = new SpannableString(menuItem.getTitle());
+        s.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.textcolor)), 0, s.length(), 0);
+
+        menuItem.setTitle(s);
+
         return true;
     }
 

@@ -4,7 +4,5 @@
     tools:context="com.example.basiclayoutmenuopcoes24.MainActivity">
     <item
         android:id="@+id/op_conf"
-        android:textColor="@color/textcolor"
-        android:title="@string/config">
-    </item>
+        android:title="@string/config" />
 </menu>

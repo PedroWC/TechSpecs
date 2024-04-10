@@ -15,7 +15,7 @@ import com.TechSpecs.R;
 public class ModelAdapter extends ArrayAdapter<String> {
     private final Context context;
     private final String[] models;
-    private final int[] imageIds; // Suponha que você tem IDs de imagens correspondentes
+    private final int[] imageIds;
 
     public ModelAdapter(@NonNull Context context, String[] models, int[] imageIds) {
         super(context, R.layout.grid_item_model, models);

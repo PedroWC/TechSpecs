@@ -10,12 +10,12 @@ public class AudioHelper {
     private MediaPlayer mediaPlayer;
 
     public void playClickSound(Context context) {
-        // Libere o MediaPlayer se ele já estiver em uso
+        // Liberando o MediaPlayer se ele já estiver em uso
         if (mediaPlayer != null) {
             mediaPlayer.release();
         }
 
-        // Inicialize o MediaPlayer com o arquivo de som do clique
+        // Inicializando o MediaPlayer com o arquivo de som do clique
         mediaPlayer = MediaPlayer.create(context, R.raw.click_sound);
 
         mediaPlayer.setOnCompletionListener(mp -> {
@@ -25,16 +25,16 @@ public class AudioHelper {
             }
         });
 
-        mediaPlayer.start(); // Toca o som
+        mediaPlayer.start(); // Tocando o som
     }
 
     public void playBackSound(Context context) {
-        // Libere o MediaPlayer se ele já estiver em uso
+        // Liberando o MediaPlayer se ele já estiver em uso
         if (mediaPlayer != null) {
             mediaPlayer.release();
         }
 
-        // Inicialize o MediaPlayer com o arquivo de som do voltar
+        // Inicializando o MediaPlayer com o arquivo de som do voltar
         mediaPlayer = MediaPlayer.create(context, R.raw.back_sound);
 
         mediaPlayer.setOnCompletionListener(mp -> {
